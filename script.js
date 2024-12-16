@@ -3,7 +3,7 @@ let button = document.getElementById("searchBtn")
 button.addEventListener("click", function () {
 
     let city = document.getElementById("default-search").value
-    
+
     let api = `http://api.weatherapi.com/v1/current.json?key=c5b978a1b9bb4eb9afb151022241612&q=${city}&aqi=no`
 
     fetch(api)
@@ -26,7 +26,7 @@ button.addEventListener("click", function () {
             let pressure = document.getElementById("pressureValue")
             pressure.innerHTML = data.current.pressure_mb
             let location = document.getElementById("location")
-            location.innerHTML = data.location.name
+            location.innerHTML = data.location.region
             let cityName = document.getElementById("cityName")
             cityName.innerHTML = data.location.name
 
