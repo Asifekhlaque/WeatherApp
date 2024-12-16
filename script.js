@@ -3,6 +3,7 @@ let button = document.getElementById("searchBtn")
 button.addEventListener("click", function () {
 
     let city = document.getElementById("default-search").value
+    
     let api = `http://api.weatherapi.com/v1/current.json?key=c5b978a1b9bb4eb9afb151022241612&q=${city}&aqi=no`
 
     fetch(api)
